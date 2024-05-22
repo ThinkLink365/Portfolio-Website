@@ -26,7 +26,7 @@ This website is a showcase of my work, skills, and interests. It includes pages 
   - HTML5
   - CSS3
   - JavaScript
-  - 
+  
 - **Backend**:
   - Node.js
   - Express
