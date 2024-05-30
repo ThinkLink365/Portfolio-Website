@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <div className="container mt-5">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Portfolio />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

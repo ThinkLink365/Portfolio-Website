@@ -3,7 +3,7 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <footer>
-      <p>© 2024 Your Company</p>
+      <p className="text-center">© 2024 Liam Ó Dubhgáin</p>
     </footer>
   );
 };
