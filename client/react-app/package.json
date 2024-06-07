@@ -2,7 +2,7 @@
   "name": "react-app",
   "private": true,
   "version": "0.0.0",
-  "proxy":"https://localhost:5000",
+  "proxy": "https://localhost:5000",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.34",
     "bootstrap": "^5.3.3",
+    "components": "^0.1.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1"
+    "react-error-boundary": "^4.0.13",
+    "react-router-dom": "^6.23.1",
+    "styled": "^1.0.0",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
