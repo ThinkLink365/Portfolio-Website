@@ -1,51 +1,67 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Thwomp from "../components/Thwomp";
 import ContactInfo from "../components/ContactInfo";
-import GroundBreak from "../components/GroundBreak";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../components/Impressive.css";
 
-interface ContactProps {
-  onThwompHitBottom: () => void;
-}
+const Contact: React.FC = () => {
+  const contactItems = [
+    {
+      title: "Email",
+      text: "Send me an email!",
+      icon: (
+        <FontAwesomeIcon icon={faEnvelope} size="4x" className="contact-icon" />
+      ),
+      link: "mailto:liamodubhgain2003@gmail.com",
+    },
+    {
+      title: "Github",
+      text: "Take a look at all my projects on my Github!",
+      icon: (
+        <FontAwesomeIcon icon={faGithub} size="4x" className="contact-icon" />
+      ),
+      link: "https://github.com/ThinkLink365",
+    },
+    {
+      title: "LinkedIn",
+      text: "Connect with me on LinkedIn!",
+      icon: (
+        <FontAwesomeIcon icon={faLinkedin} size="4x" className="contact-icon" />
+      ),
+      link: "https://www.linkedin.com/in/liam-%C3%B3-dubhg%C3%A1in-4392272b5/",
+    },
+  ];
 
-const Contact: React.FC<ContactProps> = ({ onThwompHitBottom }) => {
-  const [thwompVisible, setThwompVisible] = useState(false);
-  const [infoVisible, setInfoVisible] = useState(false);
-  const [groundBreakVisible, setGroundBreakVisible] = useState(false);
+  const [visibleItems, setVisibleItems] = useState<boolean[]>(
+    Array(contactItems.length).fill(false)
+  );
 
   useEffect(() => {
-    setThwompVisible(true);
-    const timer = setTimeout(() => {
-      setGroundBreakVisible(true);
+    contactItems.forEach((_, index) => {
       setTimeout(() => {
-        setInfoVisible(true);
-      }, 500); // Adjusted timing for info visibility
-    }, 300); // Adjusted timing for ground break
-    return () => clearTimeout(timer);
-  }, []);
+        setVisibleItems((prev) => {
+          const newVisibleItems = [...prev];
+          newVisibleItems[index] = true;
+          return newVisibleItems;
+        });
+      }, index * 650);
+    });
+  }, [contactItems]);
 
   return (
-    <Container style={{ position: "relative" }}>
+    <Container className="container">
       <Row className="justify-content-center">
-        <Col md="auto">
-          <div style={{ position: "relative", display: "inline-block" }}>
-            <Thwomp visible={thwompVisible} onHitBottom={onThwompHitBottom} />
-            {groundBreakVisible && <GroundBreak />}
-            <ContactInfo
-              visible={infoVisible}
-              side="right"
-              contactItems={[
-                {
-                  title: "Email",
-                  text: "contact@example.com",
-                  link: "mailto:contact@example.com",
-                },
-                { title: "Phone", text: "(123) 456-7890" },
-                { title: "Address", text: "123 Main St, Anytown, USA" },
-              ]}
-            />
-          </div>
-        </Col>
+        {contactItems.map((item, index) => (
+          <Col md={12} className="mb-4" key={index}>
+            {visibleItems[index] && (
+              <div className="contact-info-container">
+                <ContactInfo {...item} delay={0} />
+              </div>
+            )}
+          </Col>
+        ))}
       </Row>
     </Container>
   );

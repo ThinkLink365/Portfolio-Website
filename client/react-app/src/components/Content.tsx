@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Fade from "react-bootstrap/Fade";
-import "./Animation.css";
 
 interface ContentWithImageProps {
   title: string;

@@ -1,0 +1,95 @@
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+  }
+  
+
+  html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.footer {
+  background-color: #f8f9fa; 
+  padding: 1rem 0; 
+  text-align: center;
+}
+.contact-info {
+  position: relative;
+  padding: 10px;
+}
+
+.contact-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.contact-title {
+  margin: 0;
+}
+
+.contact-text {
+  margin-top: 20px;
+}
+
+.contact-link {
+position:absolute;
+bottom:10px;
+right:10px;
+}
+@keyframes fallDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.fall-down {
+  animation: fallDown 0.5s ease forwards;
+}
+
+.hidden {
+  visibility: hidden;
+}
