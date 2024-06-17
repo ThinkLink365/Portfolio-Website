@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
       title: "Email",
       text: "Send me an email!",
       icon: (
-        <FontAwesomeIcon icon={faEnvelope} size="4x" className="contact-icon" />
+        <FontAwesomeIcon icon={faEnvelope} size="3x" className="contact-icon" />
       ),
       link: "mailto:liamodubhgain2003@gmail.com",
     },
@@ -20,7 +20,7 @@ const Contact: React.FC = () => {
       title: "Github",
       text: "Take a look at all my projects on my Github!",
       icon: (
-        <FontAwesomeIcon icon={faGithub} size="4x" className="contact-icon" />
+        <FontAwesomeIcon icon={faGithub} size="3x" className="contact-icon" />
       ),
       link: "https://github.com/ThinkLink365",
     },
@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
       title: "LinkedIn",
       text: "Connect with me on LinkedIn!",
       icon: (
-        <FontAwesomeIcon icon={faLinkedin} size="4x" className="contact-icon" />
+        <FontAwesomeIcon icon={faLinkedin} size="3x" className="contact-icon" />
       ),
       link: "https://www.linkedin.com/in/liam-%C3%B3-dubhg%C3%A1in-4392272b5/",
     },
