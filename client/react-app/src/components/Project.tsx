@@ -6,9 +6,10 @@ interface ProjectProps {
   text: string;
   img: string;
   link: string;
+  icons: React.ReactNode[];
 }
 
-const Project: React.FC<ProjectProps> = ({ title, text, img, link }) => {
+const Project: React.FC<ProjectProps> = ({ title, text, img, link, icons }) => {
   return (
     <div className="project">
       <h2 className="project-title">{title}</h2>
@@ -22,6 +23,13 @@ const Project: React.FC<ProjectProps> = ({ title, text, img, link }) => {
       >
         Learn More
       </a>
+      <div className="project-icons">
+        {icons.map((icon, index) => (
+          <div key={index} className="project-icon icon-size">
+            {icon}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
