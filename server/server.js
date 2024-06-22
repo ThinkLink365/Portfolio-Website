@@ -1,8 +1,17 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const app = express();
+app.use(bodyParser.json());
+app.use(cors());
 
-app.get("/", (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree"]})
-})
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/portfolio');
+console.log('Connected to MongoDB');
 
-app.listen(5000, () => {console.log("Server started on port 5000")})
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
