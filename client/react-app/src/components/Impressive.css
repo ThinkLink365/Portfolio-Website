@@ -163,3 +163,13 @@ gap: 10px; /* Optional: Adds space between icons */
 margin-bottom: 16px; /* Space below the icons */
 margin-top: 20px
 }
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}

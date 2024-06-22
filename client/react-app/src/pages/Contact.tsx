@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ContactInfo from "../components/ContactInfo";
+import ProjectSuggestionForm from "../components/ProjectSuggestionForm";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +19,7 @@ const Contact: React.FC = () => {
     },
     {
       title: "Github",
-      text: "Take a look at all my projects on my Github!",
+      text: "Take a look at all my projects on Github!",
       icon: (
         <FontAwesomeIcon icon={faGithub} size="3x" className="contact-icon" />
       ),
@@ -62,6 +63,9 @@ const Contact: React.FC = () => {
             )}
           </Col>
         ))}
+        <Col md={12} className="mb-4">
+          <ProjectSuggestionForm />
+        </Col>
       </Row>
     </Container>
   );
