@@ -14,7 +14,7 @@ Hello and welcome to my personal website. This site is a showcase of my projects
 This website is a showcase of my work, skills, and interests. It includes pages such as:
 
 - **Home**: An introduction to who I am, what I do, my passions and pastimes as well as my goals.
-- **Portfolio**: A collection of my projects and achievements.
+- **Projects**: A collection of my projects and achievements.
 - **Contact**: Ways to get in touch with me.
 
 ## Features
@@ -29,6 +29,7 @@ This website is a showcase of my work, skills, and interests. It includes pages 
   - HTML5
   - CSS3
   - JavaScript
+  - Typescript
   - React
 - **Backend**:
   - Node.js
