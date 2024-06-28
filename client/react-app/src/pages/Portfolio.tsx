@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../components/Project"; // Importing Project component
 import kirbyPong from "../assets/images/kirby-pong.png"; // Importing image for Kirby Pong project
-import GETD from "../assets/images/GETDalt.png"; // Importing image for Portfolio Website project
+import portfolio from "../assets/images/portfolio.png"; // Importing image for Portfolio Website project
 import serverSide from "../assets/images/serverside.png"; // Importing image for Serverside Website project
 import "../assets/styles/components.css"; // Importing component-specific styles
 
@@ -27,7 +27,7 @@ const projects = [
   {
     title: "Portfolio Website",
     text: "This very website. take a look at the inner workings of this website with frontend in react, html, css and javascript and backend in node.js and express",
-    img: GETD,
+    img: portfolio,
     link: "https://github.com/ThinkLink365/Portfolio-Website",
     icons: [
       <FontAwesomeIcon icon={faHtml5} size="3x" />,
