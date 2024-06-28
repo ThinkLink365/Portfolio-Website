@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from "react";
-import vegeta from "../assets/images/vegeta.jpg";
-import adachi from "../assets/images/adachi.png";
-import nerd from "../assets/images/nerd.jpg";
-import goku from "../assets/images/goku.jpg";
-import ContentWithImage from "../components/Content";
+import pfp from "../assets/images/steven.jpeg"; // Importing profile picture
+import drive from "../assets/images/drive.jpg"; // Importing image for achievements
+import code from "../assets/images/code.jpg"; // Importing image for skills
+import tkd from "../assets/images/tkd.jpg"; // Importing image for hobbies
+import ContentWithImage from "../components/Content"; // Importing custom component
+import "../assets/styles/components.css"; // Importing component-specific styles
 
 const Home: React.FC = () => {
-  const [age, setAge] = useState<number | null>(null);
+  const [age, setAge] = useState<number | null>(null); // State to store calculated age
 
   useEffect(() => {
-    function about_me() {
-      const bday = new Date("06/04/2003");
-      const today = new Date();
+    // Function to calculate age and set it in state
+    function calculateAge() {
+      const bday = new Date("06/04/2003"); // Birthday date
+      const today = new Date(); // Today's date
 
-      let time_diff = today.getTime() - bday.getTime();
-      time_diff = time_diff / 1000 / 31556952;
+      let timeDiff = today.getTime() - bday.getTime(); // Difference in milliseconds
+      timeDiff = timeDiff / 1000 / 31556952; // Convert milliseconds to years
 
-      const calculatedAge = parseFloat(time_diff.toFixed(3));
-      setAge(calculatedAge);
+      const calculatedAge = parseFloat(timeDiff.toFixed(3)); // Round and parse to float
+      setAge(calculatedAge); // Set age in state
     }
 
-    about_me();
-  }, []);
+    calculateAge(); // Invoke age calculation function
+  }, []); // Empty dependency array ensures useEffect runs only once on component mount
 
   return (
-    <div>
+    <div className="content">
       <h1 className="text-center">Welcome to my website!</h1>
       <p className="text-center">
         This is a place where you can learn a little bit about me, my hobbies,
@@ -34,7 +36,7 @@ const Home: React.FC = () => {
       <h2 className="text-center">Who am I?</h2>
       <div className="d-flex justify-content-center my-3">
         <img
-          src={vegeta}
+          src={pfp}
           alt="Liam"
           className="img-fluid rounded-circle"
           width={300}
@@ -56,6 +58,7 @@ const Home: React.FC = () => {
         helping others and giving my all whatever I do. I have many hobbies such
         as Tae-Kwon-Do, Swimming, Coding and Gaming.
       </p>
+      {/* Component for displaying achievements with image */}
       <ContentWithImage
         title="List of Achievements"
         points={[
@@ -63,9 +66,10 @@ const Home: React.FC = () => {
           "Introduction to Coaching Course completed as of March 2024",
           "Full Category B Drivers Licence",
         ]}
-        imgUrl={adachi}
+        imgUrl={drive}
         imgPosition="right"
       />
+      {/* Component for displaying skills with image */}
       <ContentWithImage
         title="Skills"
         points={[
@@ -76,9 +80,10 @@ const Home: React.FC = () => {
           "Excellent customer service and communication skills",
           "Capable for working in a team or taking the initiative",
         ]}
-        imgUrl={nerd}
+        imgUrl={code}
         imgPosition="left"
       />
+      {/* Component for displaying hobbies and passions with image */}
       <ContentWithImage
         title="Hobbies and Passions"
         points={[
@@ -89,7 +94,7 @@ const Home: React.FC = () => {
           "Enthusiastic about video games. They have been a great way to make friends and also have thought me many things about life through their storytelling. I enjoy learning new things about the games I play whether that be by playing or watching informative videos, I'm always striving to become better and more informed about the topics I'm intrested in",
           "Adive Anime Fan. Recently I have taken a liking to anime as they are highly entertaining while also giving some great messages which inspire me to become a better person.",
         ]}
-        imgUrl={goku}
+        imgUrl={tkd}
         imgPosition="right"
       />
     </div>

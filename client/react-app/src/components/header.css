@@ -1,0 +1,42 @@
+/* Header styling */
+.header {
+  background-color: #333366; /* Dark blue background for header */
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: #FF9933; /* Orange text */
+  transition: color 0.5s ease; /* Smooth transition for text color */
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link:focus {
+  color: #cc7a00; /* Darker orange on hover and focus */
+  transition: color 0.5s ease; /* Smooth transition for text color */
+}
+
+.text-orange {
+  color: #FF9933; /* Orange color for brand text */
+}
+
+/* Light mode styles */
+.light-mode .navbar-dark .navbar-brand,
+.light-mode .navbar-dark .nav-link {
+  color: #FFE700; /* Gold text */
+  transition: color 0.5s ease; /* Smooth transition for text color */
+}
+
+.light-mode .navbar-dark .navbar-brand:hover,
+.light-mode .navbar-dark .navbar-brand:focus,
+.light-mode .navbar-dark .nav-link:hover,
+.light-mode .navbar-dark .nav-link:focus {
+  color: #FFD700; /* Slightly darker gold text on hover and focus */
+  transition: color 0.5s ease; /* Smooth transition for text color */
+}
+
+.light-mode .text-orange {
+  color: #FFE700; /* Gold color for brand text */
+}

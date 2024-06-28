@@ -1,0 +1,63 @@
+/* CSS for Fade-in Animation */
+.fade-in {
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 1s ease-in; /* Smooth transition effect */
+}
+
+.fade-in.visible {
+  opacity: 1; /* Opacity 1 when 'visible' class is added */
+}
+
+/* CSS for Slide-in from Left Animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start off-screen left */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    transform: translateX(0); /* Slide to center */
+    opacity: 1; /* Fade in */
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards; /* Apply animation */
+}
+
+/* CSS for Slide-in from Right Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Start off-screen right */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    transform: translateX(0); /* Slide to center */
+    opacity: 1; /* Fade in */
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-out forwards; /* Apply animation */
+}
+
+/* CSS for Fall Down Animation */
+@keyframes fallDown {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-50px); /* Move up */
+    visibility: hidden; /* Initially hidden */
+  }
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move down */
+    visibility: visible; /* Visible */
+  }
+}
+
+.fall-down {
+  animation: fallDown 0.5s ease forwards; /* Apply animation */
+}
+
+.hidden {
+  visibility: hidden; /* Hide element */
+}

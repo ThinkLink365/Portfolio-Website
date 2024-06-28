@@ -1,0 +1,158 @@
+/* Contact info styling */
+.contact-info {
+  position: relative;
+  padding: 10px;
+  background-color: #000; /* Black background for contact info */
+  color: #FFF; /* White text */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for background and text color */
+}
+
+.contact-icon-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.contact-title {
+  margin: 0;
+}
+
+.contact-text {
+  margin-top: 20px;
+}
+
+.contact-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #FF9933; /* Orange link */
+  transition: color 0.5s ease; /* Smooth transition for link color */
+}
+
+/* Project card styling */
+.project {
+  width: calc(33.333% - 32px); /* Ensure three items in a row with margins */
+  overflow: hidden; /* Ensures content does not overflow the box */
+  border: 1px solid #FF9933; /* Orange border */
+  padding: 10px; /* Adds padding inside the box */
+  box-sizing: border-box;
+  text-align: center;
+  margin: 16px; /* Adds margin between cards */
+  background-color: #333366; /* Dark blue background for project cards */
+  color: #fff; /* White text color */
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Smooth transitions */
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  color: #FF9933; /* Orange title */
+}
+
+.project-img {
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the area without distorting */
+  display: block; /* Ensure the image is treated as a block element */
+  margin-bottom: 16px;
+  border-radius: 4px; /* Adds some rounding to the image corners */
+}
+
+.project-text {
+  margin: 16px 0;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #FF9933; /* Orange button */
+  color: black; /* Black text color */
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transitions */
+}
+
+.project-link:hover {
+  background-color: #fd850eee; /* Darker orange on hover */
+}
+
+.project-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the icons */
+  gap: 10px; /* Adds space between icons */
+  margin-bottom: 16px; /* Space below the icons */
+  margin-top: 20px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #000; /* Black background for the portfolio section */
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.flex-container img {
+  max-width: 100%;
+  margin: 0 auto; /* Center the image */
+  border-radius: 10px; /* Optional: Add rounding to the image corners */
+}
+
+.flex-container .text {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.flex-container.flex-row-reverse .text {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.content-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Light mode styles */
+.light-mode .contact-info {
+  background-color: #fff; /* White background for contact info */
+  color: #000; /* Black text color */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for background and text color */
+}
+
+.light-mode .contact-link {
+  color: #FFC770; /* Gold link */
+  transition: color 0.5s ease; /* Smooth transition for link color */
+}
+
+.light-mode .project {
+  background-color: #C3B1E1; /* White background for project cards */
+  color: #000; /* Black text color */
+  border: 1px solid #FFE700; /* Gold border */
+}
+
+.light-mode .project-title {
+  color: #FFE700; /* Gold title */
+}
+
+.light-mode .project-link {
+  background-color: #FFE700; /* Gold button */
+  color: #000; /* Black text color */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transitions */
+}
+
+.light-mode .project-link:hover {
+  background-color: #FFB700; /* Slightly darker gold button on hover */
+}
+
+.light-mode .portfolio {
+  background-color: #fff; /* White background for the portfolio section */
+}

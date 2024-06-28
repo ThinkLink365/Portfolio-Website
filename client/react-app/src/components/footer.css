@@ -1,0 +1,8 @@
+/* Footer styling */
+.footer {
+  background-color: #333366; /* Dark blue background for footer */
+  color: #FF9933; /* Orange text color */
+  padding: 1rem 0; /* Padding top and bottom */
+  text-align: center; /* Center-align text */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transitions for background color and text color */
+}

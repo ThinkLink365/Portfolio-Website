@@ -1,0 +1,72 @@
+/* General styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  body {
+    background-color: black; /* Default background color */
+    color: white; /* Default text color */
+    font-family: 'Lato', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body.light-mode {
+    background-color: white; /* Background color for light mode */
+    color: black; /* Text color for light mode */
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000; /* Black background for the root element */
+    color: #fff; /* White text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  
+.container {
+  flex: 1;
+  transition: background-color 0.5s ease; 
+}
+  
+  
+/* Light mode styles */
+.light-mode {
+    background-color: #fff; /* White background for the entire page */
+    color: #000; /* Black text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .light-mode .header,
+  .light-mode .footer,
+  .light-mode .project,
+  .light-mode .portfolio {
+    background-color: #C3B1E1; /* White background */
+    color: #FFE700; /* Black text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  
+.light-mode .bg-dark-blue {
+    background-color: #C3B1E1; /* Purple background for the navbar */
+  }
+  
+  .light-mode #root {
+    background-color: #fff; /* White background for the root element */
+    color: #000; /* Black text color */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  .btn-dark-mode .fa-moon {
+    color: #fff; /* Black moon icon */
+  }
+  
+  .light-mode .btn-light-mode .fa-moon {
+    color: #000; /* White moon icon */
+  }
+  

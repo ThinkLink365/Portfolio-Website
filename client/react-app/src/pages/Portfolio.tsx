@@ -1,9 +1,9 @@
-// /mnt/data/Portfolio.tsx
 import React from "react";
-import Project from "../components/Project";
-import kirbyPong from "../assets/images/kirby-pong.png";
-import GETD from "../assets/images/GETDalt.png";
-import serverSide from "../assets/images/serverside.png";
+import Project from "../components/Project"; // Importing Project component
+import kirbyPong from "../assets/images/kirby-pong.png"; // Importing image for Kirby Pong project
+import GETD from "../assets/images/GETDalt.png"; // Importing image for Portfolio Website project
+import serverSide from "../assets/images/serverside.png"; // Importing image for Serverside Website project
+import "../assets/styles/components.css"; // Importing component-specific styles
 
 import {
   faJava,
@@ -12,15 +12,17 @@ import {
   faJs,
   faReact,
   faNodeJs,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from "@fortawesome/free-brands-svg-icons"; // Importing FontAwesome icons for project technologies
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Importing FontAwesomeIcon component for rendering icons
+
+// Array of project objects with details
 const projects = [
   {
     title: "Kirby Pong",
     text: "A kirby themed pong game made with javafx featuring saving to a MySQL database, serialiation and various design patterns",
     img: kirbyPong,
     link: "https://github.com/ThinkLink365/KirbyPong",
-    icons: [<FontAwesomeIcon icon={faJava} size="3x" />],
+    icons: [<FontAwesomeIcon icon={faJava} size="3x" />], // Array of FontAwesome icons for project technologies
   },
   {
     title: "Portfolio Website",
@@ -33,7 +35,7 @@ const projects = [
       <FontAwesomeIcon icon={faJs} size="3x" />,
       <FontAwesomeIcon icon={faReact} size="3x" />,
       <FontAwesomeIcon icon={faNodeJs} size="3x" />,
-    ],
+    ], // Array of FontAwesome icons for project technologies
   },
   {
     title: "Serverside Website",
@@ -45,20 +47,22 @@ const projects = [
       <FontAwesomeIcon icon={faCss3Alt} size="3x" />,
       <FontAwesomeIcon icon={faJs} size="3x" />,
       <FontAwesomeIcon icon={faNodeJs} size="3x" />,
-    ],
+    ], // Array of FontAwesome icons for project technologies
   },
 ];
+
 const Portfolio: React.FC = () => {
   return (
     <div className="portfolio">
+      {/* Mapping through projects array to render Project components */}
       {projects.map((project, index) => (
         <Project
-          key={index}
-          title={project.title}
-          text={project.text}
-          img={project.img}
-          link={project.link}
-          icons={project.icons}
+          key={index} // Using index as key for each Project component (not ideal, consider using a unique identifier if possible)
+          title={project.title} // Passing project title as prop
+          text={project.text} // Passing project description as prop
+          img={project.img} // Passing project image as prop
+          link={project.link} // Passing project GitHub link as prop
+          icons={project.icons} // Passing array of technology icons as prop
         />
       ))}
     </div>

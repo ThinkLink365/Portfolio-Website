@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Impressive.css";
+import "../assets/styles/components.css";
 
 interface ContactItem {
   title: string;
@@ -18,18 +18,26 @@ const ContactInfo: React.FC<ContactItem> = ({
 }) => {
   const [animate, setAnimate] = useState(false);
 
+  // useEffect to handle animation after a delay
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAnimate(true);
+      setAnimate(true); // Trigger animation after delay
     }, delay);
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer); // Clear timeout on unmount or change
   }, [delay]);
 
   return (
     <div className={`contact-info ${animate ? "fall-down" : ""}`}>
+      {/* Title */}
       <h2 className="contact-title">{title}</h2>
+
+      {/* Icon container */}
       <div className="contact-icon-container">{icon}</div>
+
+      {/* Text */}
       <h3 className="contact-text">{text}</h3>
+
+      {/* Link (if provided) */}
       {link && (
         <a
           className="contact-link"
