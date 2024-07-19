@@ -1,3 +1,14 @@
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure images do not exceed their container's width */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Contact info styling */
 .contact-info {
   position: relative;
@@ -119,6 +130,20 @@
 .content-img {
   max-width: 100%;
   height: auto;
+}
+
+.img-fluid {
+  border: 5px solid #FFF; /* Add a border around the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  margin: 10px; /* Add margin around the image */
+  border-radius: 10px; /* Apply border-radius for rounded corners */
+}
+
+.light-mode .img-fluid {
+  border: 5px solid #333; /* Add a border around the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  margin: 10px; /* Add margin around the image */
+  border-radius: 10px; /* Apply border-radius for rounded corners */
 }
 
 /* Light mode styles */

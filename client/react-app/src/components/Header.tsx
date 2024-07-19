@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min"; // Bootstrap JS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // FontAwesome icons
@@ -12,6 +12,15 @@ const Header: React.FC = () => {
     const savedTheme = localStorage.getItem("lightMode");
     return savedTheme ? JSON.parse(savedTheme) : false;
   });
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+    if (navbarCollapse) {
+      navbarCollapse.classList.remove("show");
+    }
+  }, [location]);
 
   // Effect to toggle light/dark mode class on body based on state change
   useEffect(() => {
@@ -27,17 +36,13 @@ const Header: React.FC = () => {
       return newMode;
     });
   };
-
   return (
     <header className="header fixed-top">
-      {/* Navbar component */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark-blue">
         <div className="container-fluid">
-          {/* Navbar brand */}
           <Link className="navbar-brand" to="/">
             Portfolio
           </Link>
-          {/* Navbar toggler for responsive design */}
           <button
             className="navbar-toggler"
             type="button"
@@ -49,9 +54,7 @@ const Header: React.FC = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          {/* Navbar collapse with navigation links */}
           <div className="collapse navbar-collapse" id="navbarNav">
-            {/* Navbar links */}
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
@@ -69,7 +72,6 @@ const Header: React.FC = () => {
                 </Link>
               </li>
             </ul>
-            {/* Button to toggle light/dark mode */}
             <button
               onClick={toggleLightMode}
               className={`btn ${

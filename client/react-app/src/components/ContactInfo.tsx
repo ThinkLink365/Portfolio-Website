@@ -29,7 +29,9 @@ const ContactInfo: React.FC<ContactItem> = ({
   return (
     <div className={`contact-info ${animate ? "fall-down" : ""}`}>
       {/* Title */}
-      <h2 className="contact-title">{title}</h2>
+      <h2 className="contact-title" style={{ marginTop: "20px" }}>
+        {title}
+      </h2>
 
       {/* Icon container */}
       <div className="contact-icon-container">{icon}</div>

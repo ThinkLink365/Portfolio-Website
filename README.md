@@ -21,7 +21,7 @@ This website is a showcase of my work, skills, and interests. It includes pages 
 
 - **Responsive Design**: The site is optimized for viewing on all devices, from desktops to mobile phones.
 - **Portfolio**: Displays detailed information about my projects, including images and descriptions.
-- **Contact Form**: A simple form to reach out to me directly from the website.
+- **Contact Info**: Many different ways to contact me.
 
 ## Technologies Used
 
@@ -31,9 +31,6 @@ This website is a showcase of my work, skills, and interests. It includes pages 
   - JavaScript
   - Typescript
   - React
-- **Backend**:
-  - Node.js
-  - Express
 
 ## Contact
 

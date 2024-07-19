@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap"; // Importing Row and Col components from react-bootstrap
 import ContactInfo from "../components/ContactInfo"; // Importing ContactInfo component
-import ProjectSuggestionForm from "../components/ProjectSuggestionForm"; // Importing ProjectSuggestionForm component
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Importing FontAwesome icons for GitHub and LinkedIn
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Importing FontAwesome icon for Email
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Importing FontAwesomeIcon component for rendering icons
@@ -66,9 +65,7 @@ const Contact: React.FC = () => {
           )}
         </Col>
       ))}
-      <Col md={12} className="mb-4">
-        <ProjectSuggestionForm /> {/* Render ProjectSuggestionForm component */}
-      </Col>
+      <Col md={12} className="mb-4"></Col>
     </Row>
   );
 };

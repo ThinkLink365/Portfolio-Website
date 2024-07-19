@@ -26,7 +26,7 @@ const projects = [
   },
   {
     title: "Portfolio Website",
-    text: "This very website. take a look at the inner workings of this website with frontend in react, html, css and javascript and backend in node.js and express",
+    text: "This very website. take a look at the inner workings of this website with frontend in react, html, css and javascript",
     img: portfolio,
     link: "https://github.com/ThinkLink365/Portfolio-Website",
     icons: [
@@ -34,7 +34,6 @@ const projects = [
       <FontAwesomeIcon icon={faCss3Alt} size="3x" />,
       <FontAwesomeIcon icon={faJs} size="3x" />,
       <FontAwesomeIcon icon={faReact} size="3x" />,
-      <FontAwesomeIcon icon={faNodeJs} size="3x" />,
     ], // Array of FontAwesome icons for project technologies
   },
   {
@@ -57,7 +56,7 @@ const Portfolio: React.FC = () => {
       {/* Mapping through projects array to render Project components */}
       {projects.map((project, index) => (
         <Project
-          key={index} // Using index as key for each Project component (not ideal, consider using a unique identifier if possible)
+          key={index} // Using index as key for each Project component
           title={project.title} // Passing project title as prop
           text={project.text} // Passing project description as prop
           img={project.img} // Passing project image as prop

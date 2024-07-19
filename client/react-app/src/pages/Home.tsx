@@ -24,10 +24,13 @@ const Home: React.FC = () => {
 
     calculateAge(); // Invoke age calculation function
   }, []); // Empty dependency array ensures useEffect runs only once on component mount
+  // Code adapted from gojodev
 
   return (
     <div className="content">
-      <h1 className="text-center">Welcome to my website!</h1>
+      <h1 className="text-center" style={{ marginTop: "20px" }}>
+        Welcome to my website!
+      </h1>
       <p className="text-center">
         This is a place where you can learn a little bit about me, my hobbies,
         interests, passions and even look at some of the projects I have worked

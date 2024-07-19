@@ -15,6 +15,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
   }
   
+  
   body.light-mode {
     background-color: white; /* Background color for light mode */
     color: black; /* Text color for light mode */
