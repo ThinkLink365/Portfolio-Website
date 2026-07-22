@@ -6,11 +6,19 @@ interface ProjectProps {
   text: string; // Description or text related to the project
   img: string; // URL of the project image
   link: string; // External link for more information
+  website?: string; // Optional link to a live project website
   icons: React.ReactNode[]; // Array of React nodes for displaying icons
 }
 
 // Project component as a functional component
-const Project: React.FC<ProjectProps> = ({ title, text, img, link, icons }) => {
+const Project: React.FC<ProjectProps> = ({
+  title,
+  text,
+  img,
+  link,
+  website,
+  icons,
+}) => {
   return (
     <div className="project">
       {" "}
@@ -19,6 +27,16 @@ const Project: React.FC<ProjectProps> = ({ title, text, img, link, icons }) => {
       <img src={img} alt={title} className="project-img" />{" "}
       {/* Project image */}
       <p className="project-text">{text}</p> {/* Project description */}
+      {website && (
+        <a
+          href={website}
+          className="project-link project-website-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Website
+        </a>
+      )}
       <a
         href={link}
         className="project-link"

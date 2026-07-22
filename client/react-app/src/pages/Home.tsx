@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       </h1>
       <p className="text-center">
         This is a place where you can learn a little bit about me, my hobbies,
-        interests, passions and even look at some of the projects I have worked
+        interests, passions, and even look at some of the projects I have worked
         on, as well as ways to get in touch.
       </p>
       <h2 className="text-center">Who am I?</h2>
@@ -54,9 +54,12 @@ const Home: React.FC = () => {
         </b>
       </p>
       <p id="founder-name" className="text-center">
-        My name is Liam Ó Dubhgáin. I am a 3rd year student at Munster
-        Technological University (MTU) studying Software Development. I am {age}{" "}
-        years old. I have experience with many programming languages such as
+        My name is Liam Ó Dubhgáin. I am a First-Class Honours BSc Software
+        Development graduate from Munster Technological University. I am {age}{" "}
+        years old and currently work as a Security Research Intern at
+        HiddenLayer, developing Python tooling and researching LLM
+        vulnerabilities, adversarial testing, model backdoors, and agentic AI
+        security. I have experience with many programming languages such as
         Python, Java and C just to name a few. I enjoy learning new things,
         helping others and giving my all whatever I do. I have many hobbies such
         as Tae-Kwon-Do, Swimming, Coding and Gaming.
@@ -65,8 +68,12 @@ const Home: React.FC = () => {
       <ContentWithImage
         title="List of Achievements"
         points={[
-          "1st Degree black belt since August 2021",
+          "First-Class Honours BSc (Hons) in Software Development",
+          "2nd Degree black belt with 15 years of Tae-Kwon-Do training",
           "Introduction to Coaching Course completed as of March 2024",
+          "Disability Inclusion Training Course completed as of March 2025",
+          "Sport Ireland Safeguarding 1 completed as of April 2025",
+          "Trellix Scholarship Finalist in 2024",
           "Full Category B Drivers Licence",
         ]}
         imgUrl={drive}
@@ -76,12 +83,16 @@ const Home: React.FC = () => {
       <ContentWithImage
         title="Skills"
         points={[
-          "Proficient in many Programming Languages including Python, C, Java, HTML/CSS and Javascript ",
-          "Experience with database management in both SQL and NoSQL such as MySQL, MongoDB and Neo4j",
-          "Familar with many data structures and algorithms",
-          "Fluent In Irish",
+          "Proficient in Python, TypeScript and JavaScript, with working knowledge of Java and C",
+          "Frontend development with React, HTML5, CSS3 and interactive D3.js data visualisation",
+          "Backend and API development with FastAPI, Node.js and REST",
+          "Database design and data management with MySQL, MongoDB, SQL, JSON and CSV",
+          "Microservices and cloud infrastructure using RabbitMQ, Docker, Kubernetes, Google Cloud Run and Firebase Hosting",
+          "AI security research covering prompt injection, jailbreaks, adversarial prompting, model backdoors and agentic-system security",
+          "Data analytics and machine learning with pandas, matplotlib, statistical analysis and model evaluation",
+          "Fluent in Irish",
           "Excellent customer service and communication skills",
-          "Capable for working in a team or taking the initiative",
+          "Capable of working in a team or taking the initiative",
         ]}
         imgUrl={code}
         imgPosition="left"
@@ -90,12 +101,12 @@ const Home: React.FC = () => {
       <ContentWithImage
         title="Hobbies and Passions"
         points={[
-          "Tae-Kwon-Do Practitioner for 12 years. I have been training with Cork Tae-Kwon-Do for many years and it has given me great confidence. I enjoy training, learning new things and improving on my techinques as well as pushing others to become better. I am also an assistant instructor in the club meaning I give guideance and help to the younger students and even take classes from time to time",
-          "Compotent swimmer. I have been swimming since I was very young and have developed a love for it. Whether its sea swimming or indoor swimming I enjoy swimming for long periods of time, always trying to improve",
-          "Passionate about computer science related topics. I am fascinated by many different problems and aspects of computer science related topics and find great pleasure in learning about different languages, data structures and more so I can apply it in my own work ",
-          "Member of the MTU Programming Society. As a future software developer it was a no brainer to join the Programming Society. It's filled with like-minded individuals who have helped me learn many different skills",
-          "Enthusiastic about video games. They have been a great way to make friends and also have thought me many things about life through their storytelling. I enjoy learning new things about the games I play whether that be by playing or watching informative videos, I'm always striving to become better and more informed about the topics I'm intrested in",
-          "Adive Anime Fan. Recently I have taken a liking to anime as they are highly entertaining while also giving some great messages which inspire me to become a better person.",
+          "Second Degree Tae-Kwon-Do black belt with 15 years of training. I am an assistant instructor with Cork Tae-Kwon-Do, and help train junior and senior members, as well as officiate as an umpire at regional tournaments.",
+          "Competent swimmer. I have been swimming since I was very young and have developed a love for it. Whether it's sea swimming or indoor swimming, I enjoy swimming for long periods of time, always trying to improve.",
+          "Passionate about computer science-related topics. I am fascinated by many different problems and aspects of computer science and find great pleasure in learning about different languages, data structures, and more so I can apply it in my own work.",
+          "Member of the MTU Programming Society. As a future software developer, it was a no-brainer to join the Programming Society. It's filled with like-minded individuals who have helped me learn many different skills.",
+          "Enthusiastic about video games. They have been a great way to make friends and also have taught me many things about life through their storytelling. I enjoy learning new things about the games I play whether that be by playing or watching informative videos. I'm always striving to become better and more informed about the topics I'm interested in.",
+          "Avid Anime Fan. Recently, I have taken a liking to anime as they are highly entertaining while also giving some great messages which inspire me to become a better person.",
         ]}
         imgUrl={tkd}
         imgPosition="right"

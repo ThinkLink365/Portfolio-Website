@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
     },
     {
       title: "LinkedIn",
-      text: "Connect with me on LinkedIn!",
+      text: "Contact me on LinkedIn!",
       icon: (
         <FontAwesomeIcon icon={faLinkedin} size="3x" className="contact-icon" />
       ),

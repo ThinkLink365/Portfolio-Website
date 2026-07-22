@@ -87,6 +87,12 @@ img {
   background-color: #fd850eee; /* Darker orange on hover */
 }
 
+.project-website-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 10px;
+}
+
 .project-icons {
   display: flex;
   flex-direction: row;
@@ -99,7 +105,7 @@ img {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: #000; /* Black background for the portfolio section */
   transition: background-color 0.5s ease; /* Smooth transition for background color */
 }
